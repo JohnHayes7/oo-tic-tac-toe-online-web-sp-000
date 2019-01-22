@@ -63,7 +63,7 @@ class TicTacToe
      display_board
   
   
-    elsif valid_move? == false
+    elsif valid_move?(index == false
     turn
     end
   end
