@@ -60,33 +60,33 @@ class TicTacToe
     @index = input_to_index(user_input)
     @token = current_player
   
-    if valid_move?(boar
+    if valid_move?
      move
      display_board
   
   
-    elsif valid_move?(board, index) == false
-    turn(board)
+    elsif valid_move? == false
+    turn
     end
   end
   
   
   def turn_count(board)
    counter = 0
-    board.each do |index|
-      if index == "X" || index == "O"
+    @board.each do |game_space|
+      if game_space == "X" || game_space == "O"
         counter += 1
       end
     end
     return counter
   end
 
-  def current_player(board)
-    turn_count(board) % 2 == 0 ? "X" : "O"
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
   end
 
 
-  def won?(board)
+  def won?(bo
   
       WIN_COMBINATIONS.each do |win_combination|
         win_index_1 = win_combination[0]
