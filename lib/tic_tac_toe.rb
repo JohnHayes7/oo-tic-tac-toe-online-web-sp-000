@@ -86,7 +86,7 @@ class TicTacToe
   end
 
 
-  def won?(bo
+  def won?
   
       WIN_COMBINATIONS.each do |win_combination|
         win_index_1 = win_combination[0]
@@ -107,22 +107,22 @@ class TicTacToe
     end
 
 
-  def full?(board)
-    board.all? do |i|
+  def full?
+    @board.all? do |i|
       i == "X" || i == "O"
     end
   end
 
 
-  def draw?(board)
-    if full?(board) && !won?(board)
+  def draw?
+    if full? && !won?
       return true
     end
   end
 
 
-  def over?(board)
-    if won?(board) || draw?(board)
+  def over?
+    if won? || draw?
       return true
     else
       return false
