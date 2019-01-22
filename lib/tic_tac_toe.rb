@@ -34,10 +34,10 @@ class TicTacToe
   end
 
 
-  def position_taken?
-    if @board[@index] == " " || @board[@index] == "" || @board[@index] == nil
+  def position_taken?(index)
+    if @board[index] == " " || @board[index] == "" || @board[index] == nil
       return false
-      elsif @board[@index] == "X" || @board[@index] == "O"
+      elsif @board[index] == "X" || @board[index] == "O"
       return true
     end
   end
