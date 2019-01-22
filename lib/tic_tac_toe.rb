@@ -130,12 +130,12 @@ class TicTacToe
   end
 
 
-  def winner(board)
-  if won?(board) != false
-    winning_board = won?(board)
-      if board[winning_board[0]] == "X"
+  def winner
+  if won? != false
+    winning_board = won?
+      if @board[winning_board[0]] == "X"
       return "X"
-      elsif board[winning_board[0]] == "O"
+      elsif @board[winning_board[0]] == "O"
       return "O"
       end
     else
