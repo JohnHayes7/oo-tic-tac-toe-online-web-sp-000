@@ -149,7 +149,7 @@ class TicTacToe
     turn
     turn_count
     end
-    if won?(board)
+    if won?
       puts "Congratulations #{winner}!"
     else 
       puts  "Cat's Game!"
