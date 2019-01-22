@@ -59,7 +59,7 @@ class TicTacToe
     @token = current_player
   
     if valid_move?
-     move
+     move(index, token)
      display_board
   
   
